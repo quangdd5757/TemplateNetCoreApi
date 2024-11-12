@@ -1,0 +1,17 @@
+﻿using AutoMapper;
+using TemplateNetCoreApi.Core.Dtos;
+using TemplateNetCoreApi.Core.Models;
+
+namespace TemplateNetCoreApi.Core.Mappings;
+
+public class TeacherMappingProfile : Profile
+{
+    public TeacherMappingProfile()
+    {
+        CreateMap<Teacher, TeacherDto>();
+
+        CreateMap<TeacherCreationDto, Teacher>();
+
+        CreateMap<TeacherUpdateDto, Teacher>().ReverseMap();
+    }
+}
